@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <Chronometer
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/nbrMoviesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:text="TextView"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/areaButton0"
+        android:layout_width="179dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="20dp"
+        android:onClick="areaListener"
+        android:tag="0"
+        app:layout_constraintEnd_toStartOf="@+id/areaButton1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blue_shape" />
+
+    <ImageButton
+        android:id="@+id/areaButton1"
+        android:layout_width="179dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="areaListener"
+        android:tag="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blue_shape" />
+
+    <ImageButton
+        android:id="@+id/areaButton2"
+        android:layout_width="179dp"
+        android:layout_height="107dp"
+        android:onClick="areaListener"
+        android:tag="2"
+        app:layout_constraintEnd_toStartOf="@+id/areaButton3"
+        app:layout_constraintTop_toBottomOf="@+id/areaButton0"
+        app:srcCompat="@drawable/blue_shape" />
+
+    <ImageButton
+        android:id="@+id/areaButton3"
+        android:layout_width="179dp"
+        android:layout_height="107dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="areaListener"
+        android:tag="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/areaButton1"
+        app:srcCompat="@drawable/blue_shape" />
+
+    <ImageButton
+        android:id="@+id/areaButton4"
+        android:layout_width="117dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginRight="140dp"
+        android:background="@drawable/rounded_button"
+        android:onClick="areaListener"
+        android:tag="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/MovieNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/validationButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/areaButton2" />
+
+    <Button
+        android:id="@+id/validationButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Valider"
+        android:onClick="controlNameMovie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/MovieNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/areaButton3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
